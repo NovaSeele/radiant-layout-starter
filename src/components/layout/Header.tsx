@@ -2,8 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { SearchIcon, BellIcon, UserIcon } from 'lucide-react';
+import { BellIcon, UserIcon } from 'lucide-react';
 
 type HeaderProps = {
   className?: string;
@@ -31,21 +30,7 @@ export const Header = ({ className }: HeaderProps) => {
         className
       )}
     >
-      <div className="container flex items-center justify-between">
-        <div className="flex items-center gap-2 animate-fade-in">
-          <div className="relative w-64 max-w-xs">
-            <SearchIcon 
-              size={16} 
-              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" 
-            />
-            <Input 
-              type="text"
-              placeholder="Search..."
-              className="pl-9 bg-secondary/50 border-0 focus-visible:ring-1"
-            />
-          </div>
-        </div>
-        
+      <div className="container flex items-center justify-end">
         <div className="flex items-center gap-2">
           <Button 
             variant="ghost" 
